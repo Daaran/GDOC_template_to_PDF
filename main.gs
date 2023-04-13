@@ -17,7 +17,7 @@
  */
 
 function onOpen() {
-  DocumentApp.getUi().createMenu("--Menu HF--")
+  DocumentApp.getUi().createMenu("--Menu--")
   .addItem("Lancer la création de PDF","main")
   .addSeparator()
   .addItem("Choisir la source de donnée", "showPicker")
@@ -133,7 +133,7 @@ function retriveSheets(id){
  * A function to rule them all
  */
 function main() {
-  let list = prepareData("1C0eVm9nhTGK7weDEQfAHRXlEiER8mBsK2JirhmNMliM","Feuille 1");
+  let list = prepareData("[[your id here]]","[[the sheet name here]]");
   const folder = checkFolder();
   list.forEach(e => {
     let id = copyDoc();
